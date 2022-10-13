@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image" href="./assets/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Rush | Fast Online Food Delivery</title>
+
+</head>
+
+
+<body>
+    <header>
+
+        <!-- sidenav -->
+        <div id="mySidenav" class="sidenav">
+            <div class="profile">
+                <input type="button" value="Sign Up">
+                <input type="button" value="Sign In">
+            </div>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Vendors</a>
+            <a href="#">Orders</a>
+            <a href="#">Account</a>
+            <a href="#">Logout</a>
+        </div>
+        <div id="main">
+            <!-- nav -->
+            <div class="header">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                <span>Rush <b>Foods</b></span>
+                <input type="button" value="Sign Up">
+                <input type="button" value="Sign In">
+            </div>
+            <!-- order section -->
+            <div class="order">
+                <h1>Order food at your comfort</h1>
+                <div class="flex">
+                    <div class="location">
+                        <div class="svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                            </svg>
+                        </div>
+                        <div class="input">
+                            <input type="text" placeholder="Enter delivery address">
+                        </div>
+                    </div>
+                    <div class="search">
+                        <input type="button" value="Make Order">
+
+                    </div>
+                </div>
+            </div>
+    </header>
+     <!-- services -->
+     <div class="row-index">
+        <div class="column-index">
+            <div class="card-index">
+                <div class="img">
+                    <img src="./assets/restaurant.jpg" alt="">
+                </div>
+                <div class="text">
+                    <span>Your Restaurant, Elevated	</span><br>
+                    <span><a href="#">Add your restaurant</a></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="column-index">
+            <div class="card-index">
+                <div class="img">
+                    <img src="./assets/delivery.png" alt="">
+                </div>
+                <div class="text">
+                    <span>Deliver with Rush Foods</span><br>
+                    <span><a href="#">Sign up to deliver</a></span>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+
+</body>
+
+</html>
