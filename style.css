@@ -4,6 +4,8 @@
     list-style: none;
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+
 }
 
 body {
@@ -65,20 +67,28 @@ header {
     text-align: center;
 }
 
-.sidenav .profile input {
+.sidenav .profile a 
+ {
+    
+    display: flex;
+    flex-direction: row;
+}
+.sidenav .profile a input {
     border: none;
     font-size: 1rem;
     padding: .5rem 1rem;
     border-radius: 20px;
     margin: 10px;
-
-
+    width: fit-content;
 }
-
-.sidenav .profile input:nth-of-type(1) {
-    color: white;
+.sidenav .profile a input:nth-of-type(1) {
     background: black;
+    color: white;
 }
+.sidenav .profile a input:nth-of-type(2) {
+    background: #87c6fe;
+}
+
 
 /* navbar */
 .header span:nth-of-type(2) {
@@ -86,30 +96,27 @@ header {
     padding: 2rem;
 }
 
-.header input {
-    float: right;
-    font-size: 1rem;
+
+.header a input {
     border: none;
     padding: .5rem 1rem;
-    border-radius: 20px;
-    margin: 5px;
+    float: right;
+    margin: 10px;
     opacity: .8;
 }
-
-.header input:nth-of-type(1) {
-    background: black;
-    color: white;
-
-}
-
-.header input:nth-of-type(2) {
-    background: #87c6fe;
-    color: black;
-}
-
-.header input:hover {
+.header a input:hover {
     opacity: 1;
 }
+.header a:nth-of-type(1) input {
+    background: black;
+    color: white;
+    
+}
+
+.header a:nth-of-type(2) input {
+    background: #87c6fe;
+}
+
 
 @media screen and (max-width: 786px) {
     header {

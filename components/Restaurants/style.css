@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+* {
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+}
+
+/* sidenav */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: linear-gradient(300deg, #cbcaff 0%, #87c6fe 100%);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+    padding: 1rem;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+
+}
+
+/* profile */
+.sidenav .profile {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sidenav .profile input {
+    border: none;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    margin: 10px;
+
+
+}
+
+.sidenav .profile input:nth-of-type(1) {
+    color: white;
+    background: black;
+}
+
+/* navbar */
+.header span:nth-of-type(2) {
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.header input {
+    font-size: 1rem;
+    border: none;
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    margin: 5px;
+    opacity: .8;
+
+}
+
+
+.header input:nth-of-type(1) {
+    background: black;
+    color: white;
+    float: right;
+
+
+}
+
+.header input:nth-of-type(2) {
+    background: #87c6fe;
+    color: black;
+    float: right;
+
+}
+
+.header button:nth-of-type(1) {
+    padding: .5rem 2rem;
+    border-radius: 0;
+    border: none;
+    font-size: 1rem;
+
+}
+
+
+.header input:hover {
+    opacity: 1;
+}
+
+@media screen and (max-width: 786px) {
+    main {
+        zoom: 73%;
+    }
+
+    .header input:nth-of-type(1),
+    .header input:nth-of-type(2) {
+        display: none;
+    }
+
+    .header a button:nth-of-type(1) {
+        padding: .5rem .6rem;
+
+
+    }
+}
+
+/* Restaurants */
+.flex-container {
+    display: flex;
+    color: #222222;
+
+}
+
+.card {
+    transition: 0.3s;
+    width: 50%;
+    margin: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    /* background: linear-gradient(300deg, #cbcaff 0%, #87c6fe 100%); */
+
+}
+
+.container {
+    padding: 0px;
+
+}
+
+.container p a {
+    text-decoration: underline;
+    color: #222222;
+}
+
+
+@media screen and (max-width: 786px) {
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+
+
+    }
+}
+
+/* modal */
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+.modal-content span:nth-of-type(2){
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.location {
+    display: flex;
+    justify-content: left;
+    width: 50%;
+    height: 4rem;
+    padding-left: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.location .input input {
+    background: inherit;
+    border: none;
+    height: 4rem;
+    width: 38.2rem;
+    padding-left: 2rem;
+
+}
+
+.location .input input:focus {
+    outline: none !important;
+}
+
+.location .svg svg {
+    position: relative;
+    top: 25%;
+}
+
+.location .input input::placeholder {
+    font-size: 1rem;
+}
