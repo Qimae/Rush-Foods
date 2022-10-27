@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+* {
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+}
+
+/* sidenav */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: linear-gradient(300deg, #cbcaff 0%, #87c6fe 100%);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+    padding: 1rem;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+/* profile */
+.sidenav .profile {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sidenav .profile a {
+
+    display: flex;
+    flex-direction: row;
+}
+
+.sidenav .profile a input {
+    border: none;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    margin: 10px;
+    width: fit-content;
+}
+
+.sidenav .profile a input:nth-of-type(1) {
+    background: black;
+    color: white;
+}
+
+.sidenav .profile a input:nth-of-type(2) {
+    background: #87c6fe;
+}
+
+
+/* navbar */
+.header span:nth-of-type(2) {
+    font-size: 2rem;
+    padding: 2rem;
+}
+.header span:nth-of-type(2) b {
+    color: #87c6fe;
+}
+
+.header a input {
+    border: none;
+    padding: .5rem 1rem;
+    float: right;
+    margin: 10px;
+    opacity: .8;
+}
+
+.header a input:hover {
+    opacity: 1;
+}
+
+.header a:nth-of-type(1) input {
+    background: black;
+    color: white;
+
+}
+
+.header a:nth-of-type(2) input {
+    background: #87c6fe;
+}
+
+
+@media screen and (max-width: 786px) {
+    header {
+        zoom: 73%;
+    }
+}
+
+/* orders */
+.o-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.orders {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 1rem;
+    
+}
+
+.orders:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.orders .o-img {
+    width: 20%;
+}
+
+.orders .o-text {
+    width: 80%;
+    margin-left: 20px;
+    color: black;
+}
+
+
+.orders .o-text select  {
+    border: none;
+    padding: 10px;
+    background: #87c6fe;
+    color: white;
+}
+.orders .o-text select option[value="Open"]  {
+    background: white;
+    color: black;
+}
+.orders .o-text select option[value="Open"]:hover  {
+    background: #87c6fe;
+    border: 1px solid white;
+    color: white;
+}
+.orders .o-text select option[value="Delivered"]  {
+    background: white;
+    color: black;
+    border: 1px solid white;
+
+}
+.orders .o-text select option[value="Delivered"]:hover  {
+    background: #87c6fe;
+    color: white;
+}
+
+.orders .o-text select:focus  {
+    outline: none;
+}

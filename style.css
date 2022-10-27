@@ -95,6 +95,9 @@ header {
     font-size: 2rem;
     padding: 2rem;
 }
+.header span:nth-of-type(2) b {
+    color: #87c6fe;
+}
 
 
 .header a input {
@@ -276,6 +279,9 @@ header {
     padding: 3rem;
     color: black;
 }
+.column-footer span:nth-of-type(1) b {
+    color: #87c6fe;
+}
 
 .column-footer ul li {
     padding: 10px;
@@ -300,7 +306,15 @@ header {
     padding: 3rem;
     word-spacing: 2rem;
 }
-
+.icons a {
+    text-decoration: none;
+    color: black;
+}
+.icons a:hover {
+    background: #cbcaff;
+    height: fit-content;
+    width: fit-content;
+}
 .icons span {
     word-spacing: 0;
     float: right;
