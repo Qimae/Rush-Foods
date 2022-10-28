@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+:root {
+    --primary-color-white: white;
+    --primary-bg-color-light-blue: rgb(3, 15, 71);
+    --text-color: whitesmoke;
+    --icon-color: whitesmoke;
+    --icon-color-hover: rgba(206, 201, 174, 0.808);
+    --border-color: var(--icon-color-hover);
+    --clr-orange: #87c6fe;
+    --clr-blue: rgb(19, 200, 255);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 5px;
+}
+
+
+/* sidenav */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: linear-gradient(300deg, #cbcaff 0%, #87c6fe 100%);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+    padding: 1rem;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+/* profile */
+.sidenav .profile {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+.sidenav .profile img {
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.sidenav .profile h3 {
+    color: #ffffff;
+    margin: 10px 0 5px;
+}
+
+.sidenav .profile p {
+    color: rgb(206, 240, 253);
+    font-size: 14px;
+}
+
+.sidenav .profile a input {
+    border: none;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    margin: 10px;
+    width: fit-content;
+}
+
+.sidenav .profile a input:nth-of-type(1) {
+    background: black;
+    color: white;
+}
+
+.sidenav .profile a input:nth-of-type(2) {
+    background: #87c6fe;
+}
+
+/* navbar */
+.header {
+    padding-top: 10px;
+}
+.header span:nth-of-type(2) {
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+.header span:nth-of-type(2) b {
+    color: #87c6fe;
+}
+
+.header a {
+    float: right;
+    font-size: 1rem;
+    border: none;
+    border-radius: 20px;
+    margin: 5px;
+    opacity: .8;
+}
+
+.header a:nth-of-type(1) input {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+.header a:nth-of-type(2) input {
+    background: #87c6fe;
+    border: none;
+    padding: 10px;
+}
+
+/* forms */
+
+.Login {
+    padding-top: .5vh;
+    height: 100vh;
+
+}
+
+.Login .header {
+    text-align: center;
+    padding-top: 100px;
+}
+
+.Login .main-container {
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    width: 90%;
+    height: 100vh;
+    padding: 30px;
+    box-shadow: 0 0.3rem 0.3rem var(--border-color);
+    background-color: var(--primary-color-white);
+    background-image: url('./assets/rick.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 10px;
+}
+
+.main-container .login-container {
+    padding-top: 3vh;
+    color: var(--text-color);
+
+}
+
+.main-container .login-container .container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 35%;
+    padding: 20px;
+    margin-top: 4%;
+    box-shadow: 0 0.3rem 0.3rem var(--border-color);
+    background-color: var(--primary-color-white);
+}
+
+.main-container .login-container .container-2 {
+    position: relative;
+    border: none;
+    float: left;
+    width: 35%;
+    margin-top: 2%;
+    margin-right: 100%;
+}
+
+.main-container .login-container .container-2 p {
+    text-align: center;
+    color: rgb(84, 86, 114);
+}
+
+.main-container .login-container .container-2 p a {
+    text-decoration: none;
+    color: rgb(84, 86, 114);
+    font-weight: bold;
+
+}
+
+
+
+.main-container .login-container .container-2 p a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+::placeholder {
+    color: rgb(185, 188, 238);
+    text-align: left;
+    font-size: 12px;
+}
+.form p {
+    font-size: 12px;
+    border-bottom: none;
+    margin-left: -20px;
+    margin-right: -20px;
+    box-shadow: 0 0.3rem 0.3rem rgb(238, 232, 232);
+}
+.form p h7 {
+    float: right;
+    margin-right: 10px;
+    color: rgb(185, 188, 238);
+}
+
+.form p h8 {
+    margin-left: 10px;
+    color: var(--clr-orange);
+    margin-bottom: 3rem;
+}
+
+
+
+.form span {
+    color: red;
+    font-size: .8rem;
+}
+
+.form input {
+    width: 91%;
+    padding: 10px;
+    background-color: rgb(250, 247, 228);
+    border-radius: 5px;
+    border: none;
+    color: rgb(1, 10, 61);
+    display: block;
+    margin: auto;
+}
+.form input:focus {
+    outline: .5px solid #87c6fe;
+}
+
+.form button {
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--primary-color-white);
+    background: var(--clr-orange);
+    display: block;
+    margin: auto;
+    width: 91%;
+    border: none;
+}
+
+.form button:hover {
+    background: var(--primary-color-white);
+    color: var(--clr-blue);
+    border: 1px solid var(--clr-orange);
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 995px) and (min-width: 300px) {
+    .Login {
+        margin-bottom: 6rem;
+
+    }
+
+    .Login .main-container {
+        zoom: 90%;
+        height: 130vh;
+    }
+
+    .main-container .login-container {
+        height: 100vh;
+        width: 50%;
+        margin: auto;
+        margin-top: .5vh;
+        color: var(--text-color);
+    }
+
+    .main-container .login-container .container {
+        display: block;
+        width: auto;
+        margin-left: -40px;
+        margin-right: -40px;
+
+    }
+
+    .main-container .login-container .container-2 {
+        display: block;
+        width: auto;
+        margin-left: -40px;
+        margin-right: -40px;
+    }
+    .main-container .login-container .container-2 p {
+        position: relative;
+        margin-left: 10%;
+        width: 100%;
+    }
+    .main-container .login-container .container-2 p a:hover {
+        color: #87c6fe;
+    }
+
+    .form p {
+
+        font-size: 9px;
+
+    }
+
+}
+
+@media screen and (max-width: 786px) {
+    .header {
+        zoom: 63%;
+    }
+}

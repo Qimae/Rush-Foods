@@ -16,23 +16,27 @@
         <!-- sidenav -->
         <div id="mySidenav" class="sidenav">
             <div class="profile">
-                <a href="./components/Login/index.html">
+                <a href="login.php">
                     <input type="button" value="Sign Up">
                     <input type="button" value="Sign In">
                 </a>
             </div>
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href="./components/Restaurants/index.html">Vendors</a>
-            <a href="./components/Orders/index.html">Orders</a>
-            <a href="./components/Account/index.html">Account</a>
-            <a href="index.html">Logout</a>
+            <a href="./restaurants.php">Vendors</a>
+            <a href="./orders.html">Orders</a>
+            <a href="./account.html">Account</a>
+            <a href="./logout.php">Logout</a>
         </div>
         <!-- nav -->
         <div class="header">
             <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
             <span>Rush <b>Foods</b></span>
-            <a href="./components/Login/index.html"><input type="button" value="Sign Up"></a>
-            <a href="./components/Login/index.html"><input type="button" value="Sign In"></a>
+            <a href="./register.php">
+                <input type="button" value="Sign Up">
+            </a>
+            <a href="./login.php">
+                <input type="button" value="Sign In">
+            </a>
         </div>
         <!-- order section -->
         <div class="order">
@@ -51,7 +55,7 @@
                     </div>
                 </div>
                 <div class="search">
-                    <a href="./components/Restaurants/index.html"><input type="button" value="Make Order"></a>
+                    <a href="./restaurants.php"><input type="button" value="Make Order"></a>
 
                 </div>
             </div>

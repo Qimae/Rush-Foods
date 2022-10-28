@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -136,8 +145,8 @@
         <div class="filter">
             <a href="../Breakfast/index.html"><button>Breakfast</button></a>
             <a href="../Lunch/index.html"><button>Lunch</button></a>
-            <a href="../Snacks/index.html"><button>Snacks</button></a>
-            <a href="../Drinks/index.html"><button class="active">Drinks</button></a>
+            <a href="../Snacks/index.html"><button class="active">Snacks</button></a>
+            <a href="../Drinks/index.html"><button>Drinks</button></a>
         </div><br>
         <!-- menu -->
         <div class="row">

@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -25,7 +34,7 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="../../Restaurants/index.html">Vendors</a>
         <a href="../../Orders/index.html">Orders</a>
-        <a href="../../Account/index.html">Account</a>
+        <a href=",,/../Account/index.html">Account</a>
         <a href="../../../index.html">Logout</a>
     </div>
     <div class="wrapper" id="main">
@@ -134,8 +143,8 @@
         </div><br>
         <!-- filter -->
         <div class="filter">
-            <a href="../Breakfast/index.html"><button>Breakfast</button></a>
-            <a href="../Lunch/index.html"><button class="active">Lunch</button></a>
+            <a href="../Breakfast/index.html"><button class="active">Breakfast</button></a>
+            <a href="../Lunch/index.html"><button>Lunch</button></a>
             <a href="../Snacks/index.html"><button>Snacks</button></a>
             <a href="../Drinks/index.html"><button>Drinks</button></a>
         </div><br>
