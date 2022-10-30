@@ -26,16 +26,26 @@ if (!isset($_SESSION['username'])) {
     <!-- sidenav -->
     <div id="mySidenav" class="sidenav">
         <div class="profile">
-            <img src="https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg"
-                alt="profile_picture">
-            <h3>Anamika Roy</h3>
-            <p>Designer</p>
+            <?php
+            if (isset($_SESSION['username'])) : ?>
+                <img src="https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg" alt="profile_picture" width="100px" height="100px" style="border-radius: 100%;">
+                <?php echo "<h3>" . $_SESSION['username'] . "</h3>"; ?>
+            <?php endif ?>
+            <?php
+            if (!isset($_SESSION['username'])) : ?>
+                <a href=""><input type="button" value="Sign Up">
+                    <input type="button" value="Sign In"></a>
+            <?php endif ?>
+
         </div>
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="../../Restaurants/index.html">Vendors</a>
-        <a href="../../Orders/index.html">Orders</a>
-        <a href="../../Account/index.html">Account</a>
-        <a href="../../../index.html">Logout</a>
+        <a href="./restaurants.php">Vendors</a>
+        <a href="./orders.php">Orders</a>
+        <a href="./account.php">Account</a>
+        <?php
+        if (isset($_SESSION['username'])) : ?>
+            <a href="./logout.php">Logout</a>
+        <?php endif ?>
     </div>
     <div class="wrapper" id="main">
         <!-- navbar -->

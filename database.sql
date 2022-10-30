@@ -18,3 +18,11 @@ CREATE TABLE `rush`.`profreg` (
     `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (`ID`)
 ) ENGINE = InnoDB;
+
+/* user delivery address */
+CREATE TABLE `rush`.`delivery` (
+    `ID` INT(10) NOT NULL AUTO_INCREMENT,
+    `address` VARCHAR(250) NOT NULL,
+    `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (`ID`)
+) ENGINE = InnoDB;

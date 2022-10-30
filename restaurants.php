@@ -2,10 +2,10 @@
 
 session_start();
 
-if (!isset($_SESSION['username'])) {
-    header("Location: index.php");
-}
+
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,9 +28,6 @@ if (!isset($_SESSION['username'])) {
             if (isset($_SESSION['username'])) : ?>
                 <img src="https://1.bp.blogspot.com/-vhmWFWO2r8U/YLjr2A57toI/AAAAAAAACO4/0GBonlEZPmAiQW4uvkCTm5LvlJVd_-l_wCNcBGAsYHQ/s16000/team-1-2.jpg" alt="profile_picture" width="100px" height="100px" style="border-radius: 100%;">
                 <?php echo "<h3>" . $_SESSION['username'] . "</h3>"; ?>
-
-                <p>Designer</p>
-
             <?php endif ?>
             <?php
             if (!isset($_SESSION['username'])) : ?>
@@ -41,15 +38,26 @@ if (!isset($_SESSION['username'])) {
         </div>
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="./restaurants.php">Vendors</a>
-        <a href="../Orders/index.html">Orders</a>
-        <a href="../Account/index.html">Account</a>
-        <a href="./logout.php">Logout</a>
+        <a href="./orders.php">Orders</a>
+        <a href="./account.php">Account</a>
+        <?php
+        if (isset($_SESSION['username'])) : ?>
+            <a href="./logout.php">Logout</a>
+        <?php endif ?>
+        <!-- <a href="./logout.php">Logout</a> -->
+
     </div>
     <!-- nav -->
     <div class="header">
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
         <span>Rush <b>Foods</b></span>
-        <button id="myBtn">Mariakani</button>
+        <button id="myBtn">
+            <span style="color: black;">
+                <?php echo "<h3>" . $_SESSION['address'] . "</h3>"; ?>
+            </span>
+
+        </button>
+
     </div><br>
     <!-- modal -->
     <div id="myModal" class="modal">
